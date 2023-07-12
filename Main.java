@@ -25,6 +25,17 @@ public class Main {
         System.out.println("Nama Buku: " + peminjaman1.getBuku().getNamaBuku() );
         Denda denda1 = new Denda(peminjaman1, 11);
         System.out.println("Tagihan denda: " + denda1.getTagihan());
+        System.out.println("=== Denda ditambahkan ! ===");
+
+            peminjam2.addAntiDenda();
+
+            System.out.println("Tagihan denda: " + denda1.getTagihan());
+
+            System.out.println("=== Denda dihapuskan ! ===");
+
+            peminjam2.removeAntiDenda();
+
+            System.out.println("Tagihan denda: " + denda1.gethapus());
 
         System.out.println("===================================>");
 
@@ -47,7 +58,7 @@ public class Main {
 
             peminjam2.removeAntiDenda();
 
-            System.out.println("Tagihan denda: " + denda2.getTagihan());
+            System.out.println("Tagihan denda: " + denda2.gethapus());
 
         } catch (Exception e) {
             System.out.println("terjadi kesalahan: " + e.getMessage());
